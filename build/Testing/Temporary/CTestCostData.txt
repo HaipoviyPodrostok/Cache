@@ -1,0 +1,10 @@
+/home/oleg_pupkov/projects/Cache/tests/test1.dat 2 0.0700236
+/home/oleg_pupkov/projects/Cache/tests/test2.dat 2 0.0733789
+/home/oleg_pupkov/projects/Cache/tests/test3.dat 2 0.00547234
+/home/oleg_pupkov/projects/Cache/tests/test4.dat 2 0.0668387
+test1 1 0.0142951
+test2 1 0.110477
+test3 1 0.014156
+test4 1 0.149509
+test5 1 0.161186
+---

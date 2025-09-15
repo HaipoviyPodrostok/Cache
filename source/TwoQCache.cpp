@@ -1,14 +1,17 @@
 #include "TwoQCache.hpp"
+
 #include <iostream>
 #include <cassert>
+#include <list>
+#include <unordered_map>
+#include <cstddef>
 
 namespace two_q_cache {
 
 template <typename KeyT>
 TwoQCache<KeyT>::TwoQCache(size_t size) : size_(size) {
     if (size_ < 3) {
-        std::cerr << "ERROR: cache must be > 3" << std::endl;
-        assert(false); // TODO поменять
+        throw std::invalid_argument("2Q cache size must be >= 3");
     }
     
     in_size_ = size_ / 4;
@@ -20,7 +23,7 @@ template <typename KeyT>
 bool TwoQCache<KeyT>::lookup_update(KeyT key) {
     if (hot_hash_.find(key) != hot_hash_.end()) {
         auto elem_it = hot_hash_[key];
-        if (elem_it != hot_begin()) {
+        if (elem_it != hot_.begin()) {
             hot_.splice(hot_.begin(), hot_, elem_it, std::next(elem_it));
         }
         hits_++;
@@ -30,7 +33,7 @@ bool TwoQCache<KeyT>::lookup_update(KeyT key) {
     if (in_hash_.find(key) != in_hash_.end()) {
         auto elem_it = in_hash_[key];
         if (elem_it != in_.begin()) {
-            in_.splice(in_begin(), hot_, elem_it, std::next(elem_it));
+            in_.splice(in_.begin(), hot_, elem_it, std::next(elem_it));
         }
         return true;
     }
@@ -44,12 +47,12 @@ bool TwoQCache<KeyT>::lookup_update(KeyT key) {
         in_.push_front(key);
         in_hash_[key] = in_.begin();
     } else {
-        if (out.size() >= out_size_) {
+        if (out_.size() >= out_size_) {
             auto last = out_.back();
             out_hash_.erase(last);
             out_.pop_back();
         }
-        auto last_in = in.back();
+        auto last_in = in_.back();
         in_hash_.erase(last_in);
         in_.pop_back();
 
@@ -83,13 +86,5 @@ bool TwoQCache<KeyT>::full() const {
     return (in_.size() + out_.size() + hot_.size()) >= size_;
 }
 
-template class Cache2Q<int>;
-
-
-} //namespace TwoQCache
-
-// void read_input() {
-//     size_t cap, n;
-//     std::cin >> cap >> n;
-//     for
-// }
+template class TwoQCache<int>;
+}

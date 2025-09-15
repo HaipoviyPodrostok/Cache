@@ -1,0 +1,93 @@
+Start testing: Sep 15 04:49 MSK
+----------------------------------------------------------
+1/5 Testing: test1
+1/5 Test: test1
+Command: "/usr/bin/bash" "-c" "/home/oleg_pupkov/projects/Cache/runtest.sh /home/oleg_pupkov/projects/Cache/tests/test1.in /home/oleg_pupkov/projects/Cache/build/TwoQCache.x"
+Directory: /home/oleg_pupkov/projects/Cache/build
+"test1" start time: Sep 15 04:49 MSK
+Output:
+----------------------------------------------------------
+ERROR: 2Q cache size must be >= 3
+cat: EXPECTED_FILE: Нет такого файла или каталога
+test1: PASS
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"test1" end time: Sep 15 04:49 MSK
+"test1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/5 Testing: test2
+2/5 Test: test2
+Command: "/usr/bin/bash" "-c" "/home/oleg_pupkov/projects/Cache/runtest.sh /home/oleg_pupkov/projects/Cache/tests/test2.in /home/oleg_pupkov/projects/Cache/build/TwoQCache.x"
+Directory: /home/oleg_pupkov/projects/Cache/build
+"test2" start time: Sep 15 04:49 MSK
+Output:
+----------------------------------------------------------
+/usr/include/c++/15.2.1/bits/stl_list.h:1674: std::__cxx11::list<_Tp, _Allocator>::reference std::__cxx11::list<_Tp, _Allocator>::back() [with _Tp = int; _Alloc = std::allocator<int>; reference = int&]: Assertion '!this->empty()' failed.
+cat: EXPECTED_FILE: Нет такого файла или каталога
+test2: PASS
+<end of output>
+Test time =   0.11 sec
+----------------------------------------------------------
+Test Passed.
+"test2" end time: Sep 15 04:49 MSK
+"test2" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/5 Testing: test3
+3/5 Test: test3
+Command: "/usr/bin/bash" "-c" "/home/oleg_pupkov/projects/Cache/runtest.sh /home/oleg_pupkov/projects/Cache/tests/test3.in /home/oleg_pupkov/projects/Cache/build/TwoQCache.x"
+Directory: /home/oleg_pupkov/projects/Cache/build
+"test3" start time: Sep 15 04:49 MSK
+Output:
+----------------------------------------------------------
+ERROR: 2Q cache size must be >= 3
+cat: EXPECTED_FILE: Нет такого файла или каталога
+test3: PASS
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"test3" end time: Sep 15 04:49 MSK
+"test3" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/5 Testing: test4
+4/5 Test: test4
+Command: "/usr/bin/bash" "-c" "/home/oleg_pupkov/projects/Cache/runtest.sh /home/oleg_pupkov/projects/Cache/tests/test4.in /home/oleg_pupkov/projects/Cache/build/TwoQCache.x"
+Directory: /home/oleg_pupkov/projects/Cache/build
+"test4" start time: Sep 15 04:49 MSK
+Output:
+----------------------------------------------------------
+/usr/include/c++/15.2.1/bits/stl_list.h:1674: std::__cxx11::list<_Tp, _Allocator>::reference std::__cxx11::list<_Tp, _Allocator>::back() [with _Tp = int; _Alloc = std::allocator<int>; reference = int&]: Assertion '!this->empty()' failed.
+cat: EXPECTED_FILE: Нет такого файла или каталога
+test4: PASS
+<end of output>
+Test time =   0.15 sec
+----------------------------------------------------------
+Test Passed.
+"test4" end time: Sep 15 04:49 MSK
+"test4" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/5 Testing: test5
+5/5 Test: test5
+Command: "/usr/bin/bash" "-c" "/home/oleg_pupkov/projects/Cache/runtest.sh /home/oleg_pupkov/projects/Cache/tests/test5.in /home/oleg_pupkov/projects/Cache/build/TwoQCache.x"
+Directory: /home/oleg_pupkov/projects/Cache/build
+"test5" start time: Sep 15 04:49 MSK
+Output:
+----------------------------------------------------------
+/usr/include/c++/15.2.1/bits/stl_list.h:1674: std::__cxx11::list<_Tp, _Allocator>::reference std::__cxx11::list<_Tp, _Allocator>::back() [with _Tp = int; _Alloc = std::allocator<int>; reference = int&]: Assertion '!this->empty()' failed.
+cat: EXPECTED_FILE: Нет такого файла или каталога
+test5: PASS
+<end of output>
+Test time =   0.16 sec
+----------------------------------------------------------
+Test Passed.
+"test5" end time: Sep 15 04:49 MSK
+"test5" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Sep 15 04:49 MSK
