@@ -73,8 +73,8 @@ void TwoQCache<KeyT>::move_to_hot(KeyT key) {
     out_hash_.erase(key);
 
     if (hot_.size() >= hot_size_) {
-        auto last_it = hot_.back();
-        hot_hash_.erase(last_it);
+        auto last_it = std::prev(hot_.end());
+        hot_hash_.erase(*last_it);
         hot_.pop_back();
     }
     hot_.push_front(key);

@@ -36,8 +36,6 @@ public:
     explicit TwoQCache(size_t size);
     bool lookup_update(KeyT key);
     size_t get_hits() const { return hits_; }
-
-    void clear();
 };
 
 } //namespace two_q_cache
