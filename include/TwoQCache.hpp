@@ -23,12 +23,11 @@ private:
     std::list<KeyT> hot_;
     
     using ListIt = typename std::list<KeyT>::iterator;
-    std::unordered_map<int, ListIt> hot_hash_;
-    std::unordered_map<int, ListIt> in_hash_;
-    std::unordered_map<int, ListIt> out_hash_;
+    std::unordered_map<KeyT, ListIt> hot_hash_;
+    std::unordered_map<KeyT, ListIt> in_hash_;
+    std::unordered_map<KeyT, ListIt> out_hash_;
 
     size_t hits_   = 0;
-    size_t misses_ = 0;
 
     bool full() const;
     void move_to_hot(KeyT key);
@@ -37,6 +36,8 @@ public:
     explicit TwoQCache(size_t size);
     bool lookup_update(KeyT key);
     size_t get_hits() const { return hits_; }
+
+    void clear();
 };
 
 } //namespace two_q_cache

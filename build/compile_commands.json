@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/oleg_pupkov/projects/Cache/build",
+  "command": "/usr/bin/c++  -I/home/oleg_pupkov/projects/Cache/include -g -o CMakeFiles/TwoQCache_lib.dir/main.cpp.o -c /home/oleg_pupkov/projects/Cache/main.cpp",
+  "file": "/home/oleg_pupkov/projects/Cache/main.cpp",
+  "output": "CMakeFiles/TwoQCache_lib.dir/main.cpp.o"
+},
+{
+  "directory": "/home/oleg_pupkov/projects/Cache/build",
+  "command": "/usr/bin/c++  -I/home/oleg_pupkov/projects/Cache/include -g -o CMakeFiles/TwoQCache_lib.dir/source/TwoQCache.cpp.o -c /home/oleg_pupkov/projects/Cache/source/TwoQCache.cpp",
+  "file": "/home/oleg_pupkov/projects/Cache/source/TwoQCache.cpp",
+  "output": "CMakeFiles/TwoQCache_lib.dir/source/TwoQCache.cpp.o"
+},
+{
+  "directory": "/home/oleg_pupkov/projects/Cache/build",
+  "command": "/usr/bin/c++  -I/home/oleg_pupkov/projects/Cache/include -g -o CMakeFiles/TwoQCache.x.dir/main.cpp.o -c /home/oleg_pupkov/projects/Cache/main.cpp",
+  "file": "/home/oleg_pupkov/projects/Cache/main.cpp",
+  "output": "CMakeFiles/TwoQCache.x.dir/main.cpp.o"
+}
+]

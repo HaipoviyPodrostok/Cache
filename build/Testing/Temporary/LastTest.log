@@ -1,21 +1,18 @@
-Start testing: Sep 16 03:07 MSK
+Start testing: Sep 18 18:28 MSK
 ----------------------------------------------------------
 1/10 Testing: test1
 1/10 Test: test1
 Command: "/usr/bin/bash" "-c" "/home/oleg_pupkov/projects/Cache/runtest.sh /home/oleg_pupkov/projects/Cache/tests/test1.in /home/oleg_pupkov/projects/Cache/build/TwoQCache.x"
 Directory: /home/oleg_pupkov/projects/Cache/build
-"test1" start time: Sep 16 03:07 MSK
+"test1" start time: Sep 18 18:28 MSK
 Output:
 ----------------------------------------------------------
-/usr/include/c++/15.2.1/bits/stl_list.h:1674: std::__cxx11::list<_Tp, _Allocator>::reference std::__cxx11::list<_Tp, _Allocator>::back() [with _Tp = int; _Alloc = std::allocator<int>; reference = int&]: Assertion '!this->empty()' failed.
-test1: FAIL
-Expected: 4
-Result: 
+test1: PASS
 <end of output>
-Test time =   0.16 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
-Test Failed.
-"test1" end time: Sep 16 03:07 MSK
+Test Passed.
+"test1" end time: Sep 18 18:28 MSK
 "test1" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -23,17 +20,15 @@ Test Failed.
 2/10 Test: test10
 Command: "/usr/bin/bash" "-c" "/home/oleg_pupkov/projects/Cache/runtest.sh /home/oleg_pupkov/projects/Cache/tests/test10.in /home/oleg_pupkov/projects/Cache/build/TwoQCache.x"
 Directory: /home/oleg_pupkov/projects/Cache/build
-"test10" start time: Sep 16 03:07 MSK
+"test10" start time: Sep 18 18:28 MSK
 Output:
 ----------------------------------------------------------
-test10: FAIL
-Expected: 4
-Result: 1
+test10: PASS
 <end of output>
-Test time =   0.01 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
-Test Failed.
-"test10" end time: Sep 16 03:07 MSK
+Test Passed.
+"test10" end time: Sep 18 18:28 MSK
 "test10" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -41,18 +36,17 @@ Test Failed.
 3/10 Test: test2
 Command: "/usr/bin/bash" "-c" "/home/oleg_pupkov/projects/Cache/runtest.sh /home/oleg_pupkov/projects/Cache/tests/test2.in /home/oleg_pupkov/projects/Cache/build/TwoQCache.x"
 Directory: /home/oleg_pupkov/projects/Cache/build
-"test2" start time: Sep 16 03:07 MSK
+"test2" start time: Sep 18 18:28 MSK
 Output:
 ----------------------------------------------------------
-/usr/include/c++/15.2.1/bits/stl_list.h:1674: std::__cxx11::list<_Tp, _Allocator>::reference std::__cxx11::list<_Tp, _Allocator>::back() [with _Tp = int; _Alloc = std::allocator<int>; reference = int&]: Assertion '!this->empty()' failed.
 test2: FAIL
-Expected: 4
-Result: 
+Expected: 1
+Result: 2
 <end of output>
-Test time =   0.15 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Failed.
-"test2" end time: Sep 16 03:07 MSK
+"test2" end time: Sep 18 18:28 MSK
 "test2" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -60,17 +54,17 @@ Test Failed.
 4/10 Test: test3
 Command: "/usr/bin/bash" "-c" "/home/oleg_pupkov/projects/Cache/runtest.sh /home/oleg_pupkov/projects/Cache/tests/test3.in /home/oleg_pupkov/projects/Cache/build/TwoQCache.x"
 Directory: /home/oleg_pupkov/projects/Cache/build
-"test3" start time: Sep 16 03:07 MSK
+"test3" start time: Sep 18 18:28 MSK
 Output:
 ----------------------------------------------------------
 test3: FAIL
 Expected: 15
-Result: 12
+Result: 13
 <end of output>
-Test time =   0.01 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Failed.
-"test3" end time: Sep 16 03:07 MSK
+"test3" end time: Sep 18 18:28 MSK
 "test3" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -78,18 +72,17 @@ Test Failed.
 5/10 Test: test4
 Command: "/usr/bin/bash" "-c" "/home/oleg_pupkov/projects/Cache/runtest.sh /home/oleg_pupkov/projects/Cache/tests/test4.in /home/oleg_pupkov/projects/Cache/build/TwoQCache.x"
 Directory: /home/oleg_pupkov/projects/Cache/build
-"test4" start time: Sep 16 03:07 MSK
+"test4" start time: Sep 18 18:28 MSK
 Output:
 ----------------------------------------------------------
-/usr/include/c++/15.2.1/bits/stl_list.h:1674: std::__cxx11::list<_Tp, _Allocator>::reference std::__cxx11::list<_Tp, _Allocator>::back() [with _Tp = int; _Alloc = std::allocator<int>; reference = int&]: Assertion '!this->empty()' failed.
 test4: FAIL
 Expected: 3
-Result: 
+Result: 0
 <end of output>
-Test time =   0.18 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Failed.
-"test4" end time: Sep 16 03:07 MSK
+"test4" end time: Sep 18 18:28 MSK
 "test4" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -97,18 +90,17 @@ Test Failed.
 6/10 Test: test5
 Command: "/usr/bin/bash" "-c" "/home/oleg_pupkov/projects/Cache/runtest.sh /home/oleg_pupkov/projects/Cache/tests/test5.in /home/oleg_pupkov/projects/Cache/build/TwoQCache.x"
 Directory: /home/oleg_pupkov/projects/Cache/build
-"test5" start time: Sep 16 03:07 MSK
+"test5" start time: Sep 18 18:28 MSK
 Output:
 ----------------------------------------------------------
-/usr/include/c++/15.2.1/bits/stl_list.h:1674: std::__cxx11::list<_Tp, _Allocator>::reference std::__cxx11::list<_Tp, _Allocator>::back() [with _Tp = int; _Alloc = std::allocator<int>; reference = int&]: Assertion '!this->empty()' failed.
 test5: FAIL
 Expected: 6
-Result: 
+Result: 5
 <end of output>
-Test time =   0.17 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Failed.
-"test5" end time: Sep 16 03:07 MSK
+"test5" end time: Sep 18 18:28 MSK
 "test5" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -116,7 +108,7 @@ Test Failed.
 7/10 Test: test6
 Command: "/usr/bin/bash" "-c" "/home/oleg_pupkov/projects/Cache/runtest.sh /home/oleg_pupkov/projects/Cache/tests/test6.in /home/oleg_pupkov/projects/Cache/build/TwoQCache.x"
 Directory: /home/oleg_pupkov/projects/Cache/build
-"test6" start time: Sep 16 03:07 MSK
+"test6" start time: Sep 18 18:28 MSK
 Output:
 ----------------------------------------------------------
 ERROR: 2Q cache size must be >= 3
@@ -127,7 +119,7 @@ Result:
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Failed.
-"test6" end time: Sep 16 03:07 MSK
+"test6" end time: Sep 18 18:28 MSK
 "test6" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -135,18 +127,17 @@ Test Failed.
 8/10 Test: test7
 Command: "/usr/bin/bash" "-c" "/home/oleg_pupkov/projects/Cache/runtest.sh /home/oleg_pupkov/projects/Cache/tests/test7.in /home/oleg_pupkov/projects/Cache/build/TwoQCache.x"
 Directory: /home/oleg_pupkov/projects/Cache/build
-"test7" start time: Sep 16 03:07 MSK
+"test7" start time: Sep 18 18:28 MSK
 Output:
 ----------------------------------------------------------
-/usr/include/c++/15.2.1/bits/stl_list.h:1674: std::__cxx11::list<_Tp, _Allocator>::reference std::__cxx11::list<_Tp, _Allocator>::back() [with _Tp = int; _Alloc = std::allocator<int>; reference = int&]: Assertion '!this->empty()' failed.
 test7: FAIL
 Expected: 6
-Result: 
+Result: 0
 <end of output>
-Test time =   0.14 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Failed.
-"test7" end time: Sep 16 03:07 MSK
+"test7" end time: Sep 18 18:28 MSK
 "test7" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -154,18 +145,17 @@ Test Failed.
 9/10 Test: test8
 Command: "/usr/bin/bash" "-c" "/home/oleg_pupkov/projects/Cache/runtest.sh /home/oleg_pupkov/projects/Cache/tests/test8.in /home/oleg_pupkov/projects/Cache/build/TwoQCache.x"
 Directory: /home/oleg_pupkov/projects/Cache/build
-"test8" start time: Sep 16 03:07 MSK
+"test8" start time: Sep 18 18:28 MSK
 Output:
 ----------------------------------------------------------
-/usr/include/c++/15.2.1/bits/stl_list.h:1674: std::__cxx11::list<_Tp, _Allocator>::reference std::__cxx11::list<_Tp, _Allocator>::back() [with _Tp = int; _Alloc = std::allocator<int>; reference = int&]: Assertion '!this->empty()' failed.
 test8: FAIL
 Expected: 3
-Result: 
+Result: 0
 <end of output>
-Test time =   0.16 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Failed.
-"test8" end time: Sep 16 03:07 MSK
+"test8" end time: Sep 18 18:28 MSK
 "test8" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -173,7 +163,7 @@ Test Failed.
 10/10 Test: test9
 Command: "/usr/bin/bash" "-c" "/home/oleg_pupkov/projects/Cache/runtest.sh /home/oleg_pupkov/projects/Cache/tests/test9.in /home/oleg_pupkov/projects/Cache/build/TwoQCache.x"
 Directory: /home/oleg_pupkov/projects/Cache/build
-"test9" start time: Sep 16 03:07 MSK
+"test9" start time: Sep 18 18:28 MSK
 Output:
 ----------------------------------------------------------
 ERROR: 2Q cache size must be >= 3
@@ -181,11 +171,11 @@ test9: FAIL
 Expected: 3
 Result: 
 <end of output>
-Test time =   0.01 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Failed.
-"test9" end time: Sep 16 03:07 MSK
+"test9" end time: Sep 18 18:28 MSK
 "test9" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Sep 16 03:07 MSK
+End testing: Sep 18 18:28 MSK
