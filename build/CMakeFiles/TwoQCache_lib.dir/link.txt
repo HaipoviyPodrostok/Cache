@@ -1,2 +1,0 @@
-/usr/bin/ar qc libTwoQCache_lib.a CMakeFiles/TwoQCache_lib.dir/main.cpp.o CMakeFiles/TwoQCache_lib.dir/source/TwoQCache.cpp.o
-/usr/bin/ranlib libTwoQCache_lib.a

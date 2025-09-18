@@ -1,1 +1,0 @@
-/usr/bin/c++ -g -Wl,--dependency-file=CMakeFiles/TwoQCache.x.dir/link.d CMakeFiles/TwoQCache.x.dir/main.cpp.o -o TwoQCache.x  libTwoQCache_lib.a
