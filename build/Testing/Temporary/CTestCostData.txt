@@ -2,19 +2,18 @@
 /home/oleg_pupkov/projects/Cache/tests/test2.dat 2 0.0733789
 /home/oleg_pupkov/projects/Cache/tests/test3.dat 2 0.00547234
 /home/oleg_pupkov/projects/Cache/tests/test4.dat 2 0.0668387
-test1 17 0.000470984
+test1 19 0.000451114
 test2 7 0
 test3 4 0
-test4 6 0.00162196
+test4 8 0.00134747
 test5 4 0
-test10 14 0.000655578
-test6 3 0
+test10 16 0.000577588
+test6 5 0.00220442
 test7 3 0
-test8 6 0.00178684
-test9 4 0.00261077
+test8 8 0.0011612
+test9 6 0.00171225
 ---
 test2
 test3
 test5
-test6
 test7

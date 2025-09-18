@@ -1,10 +1,10 @@
-Start testing: Sep 18 22:01 MSK
+Start testing: Sep 18 23:00 MSK
 ----------------------------------------------------------
 1/10 Testing: test1
 1/10 Test: test1
 Command: "/usr/bin/bash" "-c" "/home/oleg_pupkov/projects/Cache/runtest.sh /home/oleg_pupkov/projects/Cache/tests/test1.in /home/oleg_pupkov/projects/Cache/build/TwoQCache.x"
 Directory: /home/oleg_pupkov/projects/Cache/build
-"test1" start time: Sep 18 22:01 MSK
+"test1" start time: Sep 18 23:00 MSK
 Output:
 ----------------------------------------------------------
 test1: PASS
@@ -12,7 +12,7 @@ test1: PASS
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"test1" end time: Sep 18 22:01 MSK
+"test1" end time: Sep 18 23:00 MSK
 "test1" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -20,7 +20,7 @@ Test Passed.
 2/10 Test: test10
 Command: "/usr/bin/bash" "-c" "/home/oleg_pupkov/projects/Cache/runtest.sh /home/oleg_pupkov/projects/Cache/tests/test10.in /home/oleg_pupkov/projects/Cache/build/TwoQCache.x"
 Directory: /home/oleg_pupkov/projects/Cache/build
-"test10" start time: Sep 18 22:01 MSK
+"test10" start time: Sep 18 23:00 MSK
 Output:
 ----------------------------------------------------------
 test10: PASS
@@ -28,7 +28,7 @@ test10: PASS
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"test10" end time: Sep 18 22:01 MSK
+"test10" end time: Sep 18 23:00 MSK
 "test10" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -36,7 +36,7 @@ Test Passed.
 3/10 Test: test2
 Command: "/usr/bin/bash" "-c" "/home/oleg_pupkov/projects/Cache/runtest.sh /home/oleg_pupkov/projects/Cache/tests/test2.in /home/oleg_pupkov/projects/Cache/build/TwoQCache.x"
 Directory: /home/oleg_pupkov/projects/Cache/build
-"test2" start time: Sep 18 22:01 MSK
+"test2" start time: Sep 18 23:00 MSK
 Output:
 ----------------------------------------------------------
 test2: FAIL
@@ -46,7 +46,7 @@ Result: 2
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Failed.
-"test2" end time: Sep 18 22:01 MSK
+"test2" end time: Sep 18 23:00 MSK
 "test2" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -54,7 +54,7 @@ Test Failed.
 4/10 Test: test3
 Command: "/usr/bin/bash" "-c" "/home/oleg_pupkov/projects/Cache/runtest.sh /home/oleg_pupkov/projects/Cache/tests/test3.in /home/oleg_pupkov/projects/Cache/build/TwoQCache.x"
 Directory: /home/oleg_pupkov/projects/Cache/build
-"test3" start time: Sep 18 22:01 MSK
+"test3" start time: Sep 18 23:00 MSK
 Output:
 ----------------------------------------------------------
 test3: FAIL
@@ -64,7 +64,7 @@ Result: 13
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Failed.
-"test3" end time: Sep 18 22:01 MSK
+"test3" end time: Sep 18 23:00 MSK
 "test3" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -72,7 +72,7 @@ Test Failed.
 5/10 Test: test4
 Command: "/usr/bin/bash" "-c" "/home/oleg_pupkov/projects/Cache/runtest.sh /home/oleg_pupkov/projects/Cache/tests/test4.in /home/oleg_pupkov/projects/Cache/build/TwoQCache.x"
 Directory: /home/oleg_pupkov/projects/Cache/build
-"test4" start time: Sep 18 22:01 MSK
+"test4" start time: Sep 18 23:00 MSK
 Output:
 ----------------------------------------------------------
 test4: PASS
@@ -80,7 +80,7 @@ test4: PASS
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"test4" end time: Sep 18 22:01 MSK
+"test4" end time: Sep 18 23:00 MSK
 "test4" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -88,7 +88,7 @@ Test Passed.
 6/10 Test: test5
 Command: "/usr/bin/bash" "-c" "/home/oleg_pupkov/projects/Cache/runtest.sh /home/oleg_pupkov/projects/Cache/tests/test5.in /home/oleg_pupkov/projects/Cache/build/TwoQCache.x"
 Directory: /home/oleg_pupkov/projects/Cache/build
-"test5" start time: Sep 18 22:01 MSK
+"test5" start time: Sep 18 23:00 MSK
 Output:
 ----------------------------------------------------------
 test5: FAIL
@@ -98,7 +98,7 @@ Result: 5
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Failed.
-"test5" end time: Sep 18 22:01 MSK
+"test5" end time: Sep 18 23:00 MSK
 "test5" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -106,18 +106,15 @@ Test Failed.
 7/10 Test: test6
 Command: "/usr/bin/bash" "-c" "/home/oleg_pupkov/projects/Cache/runtest.sh /home/oleg_pupkov/projects/Cache/tests/test6.in /home/oleg_pupkov/projects/Cache/build/TwoQCache.x"
 Directory: /home/oleg_pupkov/projects/Cache/build
-"test6" start time: Sep 18 22:01 MSK
+"test6" start time: Sep 18 23:00 MSK
 Output:
 ----------------------------------------------------------
-ERROR: 2Q cache size must be >= 3
-test6: FAIL
-Expected: 8
-Result: 
+test6: PASS
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
-Test Failed.
-"test6" end time: Sep 18 22:01 MSK
+Test Passed.
+"test6" end time: Sep 18 23:00 MSK
 "test6" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -125,7 +122,7 @@ Test Failed.
 8/10 Test: test7
 Command: "/usr/bin/bash" "-c" "/home/oleg_pupkov/projects/Cache/runtest.sh /home/oleg_pupkov/projects/Cache/tests/test7.in /home/oleg_pupkov/projects/Cache/build/TwoQCache.x"
 Directory: /home/oleg_pupkov/projects/Cache/build
-"test7" start time: Sep 18 22:01 MSK
+"test7" start time: Sep 18 23:00 MSK
 Output:
 ----------------------------------------------------------
 test7: FAIL
@@ -135,7 +132,7 @@ Result: 0
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Failed.
-"test7" end time: Sep 18 22:01 MSK
+"test7" end time: Sep 18 23:00 MSK
 "test7" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -143,7 +140,7 @@ Test Failed.
 9/10 Test: test8
 Command: "/usr/bin/bash" "-c" "/home/oleg_pupkov/projects/Cache/runtest.sh /home/oleg_pupkov/projects/Cache/tests/test8.in /home/oleg_pupkov/projects/Cache/build/TwoQCache.x"
 Directory: /home/oleg_pupkov/projects/Cache/build
-"test8" start time: Sep 18 22:01 MSK
+"test8" start time: Sep 18 23:00 MSK
 Output:
 ----------------------------------------------------------
 test8: PASS
@@ -151,7 +148,7 @@ test8: PASS
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"test8" end time: Sep 18 22:01 MSK
+"test8" end time: Sep 18 23:00 MSK
 "test8" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -159,7 +156,7 @@ Test Passed.
 10/10 Test: test9
 Command: "/usr/bin/bash" "-c" "/home/oleg_pupkov/projects/Cache/runtest.sh /home/oleg_pupkov/projects/Cache/tests/test9.in /home/oleg_pupkov/projects/Cache/build/TwoQCache.x"
 Directory: /home/oleg_pupkov/projects/Cache/build
-"test9" start time: Sep 18 22:01 MSK
+"test9" start time: Sep 18 23:00 MSK
 Output:
 ----------------------------------------------------------
 test9: PASS
@@ -167,8 +164,8 @@ test9: PASS
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"test9" end time: Sep 18 22:01 MSK
+"test9" end time: Sep 18 23:00 MSK
 "test9" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Sep 18 22:01 MSK
+End testing: Sep 18 23:00 MSK
