@@ -1,19 +1,42 @@
-#include "TwoQCache.hpp"
+#pragma once
 
-#include <iostream>
-#include <cassert>
+#include <iterator>
 #include <list>
 #include <unordered_map>
-#include <cstddef>
 
-namespace two_q_cache {
+namespace TwoQCache {
+
+template<typename KeyT = int>
+class TwoQCache {
+public:
+    explicit TwoQCache(size_t size);
+    bool lookup_update(KeyT key);
+    size_t get_hits() const { return hits_; }
+
+private:
+    size_t size_;
+    size_t in_size_;
+    size_t out_size_;
+    size_t hot_size_;
+
+    std::list<KeyT> in_;
+    std::list<KeyT> out_;
+    std::list<KeyT> hot_;
+    
+    using ListIt = typename std::list<KeyT>::iterator;
+    std::unordered_map<KeyT, ListIt> hot_hash_;
+    std::unordered_map<KeyT, ListIt> in_hash_;
+    std::unordered_map<KeyT, ListIt> out_hash_;
+
+    size_t hits_ = 0;
+
+    bool full() const;
+    void move_to_hot(KeyT key);
+};
 
 template <typename KeyT>
 TwoQCache<KeyT>::TwoQCache(size_t size) : size_(size) {
-    if (size_ < 3) {
-        throw std::invalid_argument("2Q cache size must be >= 3");
-    }
-    
+        
     in_size_  = std::max(static_cast<size_t>(1), size_ / 4);
     out_size_ = std::max(static_cast<size_t>(1), size_ / 2);
     hot_size_ = size_ - in_size_ - out_size_;
@@ -86,6 +109,4 @@ template <typename KeyT>
 bool TwoQCache<KeyT>::full() const {
     return (in_.size() + out_.size() + hot_.size()) >= size_;
 }
-
-template class TwoQCache<int>;
-}
+} //namespace two_q_cache
