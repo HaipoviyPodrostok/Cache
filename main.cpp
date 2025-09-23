@@ -42,7 +42,7 @@ int main() {
     size_t ideal_hits = 0;
     
     for (size_t i = 0; i < num_elems; ++i) {
-        if (ideal_cache.lookup_update(cache[i])) {ideal_hits++;}
+        if (ideal_cache.lookup_update(cache[i], i)) {ideal_hits++;}
     }
     std::cout << two_q_hits << std::endl << ideal_hits << std::endl;
 

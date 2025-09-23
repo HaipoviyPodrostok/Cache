@@ -1046,4 +1046,4 @@ dkms.conf
 # Raspberry Pi Pico disassembler file
 *.dis
 
-.vscode
+/.vscode
