@@ -6,12 +6,11 @@
 
 namespace TwoQCache {
 
-template<typename KeyT = int>
+template<typename PageT, typename KeyT = int>
 class TwoQCache {
 public:
-    explicit TwoQCache(size_t size);
+    TwoQCache(size_t size);
     bool lookup_update(KeyT key);
-    size_t get_hits() const { return hits_; }
 
 private:
     size_t size_;
@@ -28,28 +27,27 @@ private:
     std::unordered_map<KeyT, ListIt> in_hash_;
     std::unordered_map<KeyT, ListIt> out_hash_;
 
-    size_t hits_ = 0;
+    std::unordered_map<KeyT, PageT> page_storage_;
 
     bool full() const;
     void move_to_hot(KeyT key);
 };
 
-template <typename KeyT>
-TwoQCache<KeyT>::TwoQCache(size_t size) : size_(size) {
+template <typename PageT, typename KeyT>
+TwoQCache<PageT, KeyT>::TwoQCache(size_t size) : size_(size) {
         
     in_size_  = std::max(static_cast<size_t>(1), size_ / 4);
     out_size_ = std::max(static_cast<size_t>(1), size_ / 2);
     hot_size_ = size_ - in_size_ - out_size_;
 }
 
-template <typename KeyT>
-bool TwoQCache<KeyT>::lookup_update(KeyT key) {
+template <typename PageT, typename KeyT>
+bool TwoQCache<PageT, KeyT>::lookup_update(KeyT key) {
     if (hot_hash_.find(key) != hot_hash_.end()) {
         auto elem_it = hot_hash_[key];
         if (elem_it != hot_.begin()) {
             hot_.splice(hot_.begin(), hot_, elem_it);
         }
-        hits_++;
         return true;
     }
 
@@ -88,8 +86,8 @@ bool TwoQCache<KeyT>::lookup_update(KeyT key) {
     return false;
 }
 
-template <typename KeyT>
-void TwoQCache<KeyT>::move_to_hot(KeyT key) {
+template <typename PageT, typename KeyT>
+void TwoQCache<PageT, KeyT>::move_to_hot(KeyT key) {
     auto elem_it_out = out_hash_.find(key);
     if (elem_it_out == out_hash_.end()) return;
     out_.erase(elem_it_out->second);
@@ -102,11 +100,13 @@ void TwoQCache<KeyT>::move_to_hot(KeyT key) {
     }
     hot_.push_front(key);
     hot_hash_[key] = hot_.begin();
-    hits_++;
 }
 
-template <typename KeyT>
-bool TwoQCache<KeyT>::full() const {
+template <typename PageT, typename KeyT>
+bool TwoQCache<PageT, KeyT>::full() const {
     return (in_.size() + out_.size() + hot_.size()) >= size_;
 }
+
+template <typename PageT, typename KeyT>
+void TwoQCache<PageT, KeyT>::slow_get_page
 } //namespace two_q_cache

@@ -29,7 +29,7 @@ int main() {
         cache.push_back(key);
     }
 
-    TwoQCache::TwoQCache<int> two_q_cache(cache_size);
+    TwoQCache::TwoQCache<int, std::string> two_q_cache(cache_size);
 
     size_t two_q_hits = 0;
 
