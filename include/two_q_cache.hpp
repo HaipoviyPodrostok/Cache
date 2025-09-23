@@ -9,7 +9,7 @@ namespace TwoQCache {
 template<typename PageT, typename KeyT = int>
 class TwoQCache {
 public:
-    TwoQCache(size_t size);
+    TwoQCache(size_t size, std::string storage_file_name_);
     bool lookup_update(KeyT key);
 
 private:
@@ -29,16 +29,20 @@ private:
 
     std::unordered_map<KeyT, PageT> page_storage_;
 
+    std::string storage_file_name_;
+
     bool full() const;
     void move_to_hot(KeyT key);
 };
 
 template <typename PageT, typename KeyT>
-TwoQCache<PageT, KeyT>::TwoQCache(size_t size) : size_(size) {
+TwoQCache<PageT, KeyT>::TwoQCache(size_t size, std::string storage_file_name_)
+    : size_(size),
+      storage_file_name_(storage_file_name_) {
         
-    in_size_  = std::max(static_cast<size_t>(1), size_ / 4);
-    out_size_ = std::max(static_cast<size_t>(1), size_ / 2);
-    hot_size_ = size_ - in_size_ - out_size_;
+        in_size_  = std::max(static_cast<size_t>(1), size_ / 4);
+        out_size_ = std::max(static_cast<size_t>(1), size_ / 2);
+        hot_size_ = size_ - in_size_ - out_size_;
 }
 
 template <typename PageT, typename KeyT>
@@ -108,5 +112,5 @@ bool TwoQCache<PageT, KeyT>::full() const {
 }
 
 template <typename PageT, typename KeyT>
-void TwoQCache<PageT, KeyT>::slow_get_page
+void TwoQCache<PageT, KeyT>::slow_get_page()
 } //namespace two_q_cache
