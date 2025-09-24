@@ -20,8 +20,6 @@ private:
     size_t size_;
     size_t num_elems_;
     
-    size_t hits_ = 0;
-    
     std::vector<KeyT> input_data_;
     std::vector<KeyT> cache_;
     std::unordered_map<KeyT, std::vector<size_t>> next_use_map_;

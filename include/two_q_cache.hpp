@@ -20,15 +20,18 @@ private:
     size_t hot_size_;
 
     std::list<std::pair<KeyT, PageT>> in_;
-    std::list<std::pair<KeyT, PageT>> out_;
     std::list<std::pair<KeyT, PageT>> hot_;
+    std::list<KeyT> out_;
     
     using ListIt     = typename std::list<std::pair<KeyT, PageT>>::iterator;
-    using CacheMapIt = typename std::unordered_map<KeyT, ListIt>::iterator;
+    using OutListIt  = typename std::list<KeyT>::iterator;
     
+    using MapIt    = typename std::unordered_map<KeyT, ListIt>::iterator;
+    using OutMapIt = typename std::unordered_map<KeyT, OutListIt>::iterator;
+
     std::unordered_map<KeyT, ListIt> hot_hash_;
     std::unordered_map<KeyT, ListIt> in_hash_;
-    std::unordered_map<KeyT, ListIt> out_hash_;
+    std::unordered_map<KeyT, OutListIt> out_hash_;
 
     std::function<PageT(KeyT)> slow_get_page_;
 
@@ -70,28 +73,32 @@ bool TwoQCache<PageT, KeyT>::lookup_update(KeyT key) {
     else {
         push_to_in_(key);
     }
+
     return false;
 }
 
 template <typename PageT, typename KeyT>
-void TwoQCache<PageT, KeyT>::move_page_to_begin(std::list<std::pair<KeyT, PageT>>& сache_list, 
+void TwoQCache<PageT, KeyT>::move_page_to_begin(std::list<std::pair<KeyT, PageT>>& cache_list, 
                                                 std::unordered_map<KeyT, ListIt>& cache_map,
                                                 KeyT key) {
-    CacheMapIt elem_it = cache_map.find(key);
+    MapIt elem_it = cache_map.find(key);
     
-    if (elem_it->second != сache_list.begin()) {
-        сache_list.splice(сache_list.begin(), сache_list, elem_it->second);
+    if (elem_it->second != cache_list.begin()) {
+        cache_list.splice(cache_list.begin(), cache_list, elem_it->second);
     }
 }
 
 template <typename PageT, typename KeyT>
 void TwoQCache<PageT, KeyT>::move_to_hot(KeyT key) {
-    CacheMapIt moving_page_map_it = out_hash_.find(key);
+    OutMapIt moving_page_map_it = out_hash_.find(key);
     if (moving_page_map_it == out_hash_.end()) {
         return;
     }
-    ListIt moving_page_list_it = moving_page_map_it->second;
-    std::pair<KeyT, PageT> moving_pair_key_page = *moving_page_list_it;
+    
+    OutListIt moving_page_list_it = moving_page_map_it->second;
+    PageT moving_page = slow_get_page_(key);
+
+    std::pair<KeyT, PageT> moving_pair_key_page = {key, moving_page};
     
     out_.erase(moving_page_list_it);
     out_hash_.erase(key);
@@ -120,8 +127,8 @@ void TwoQCache<PageT, KeyT>::push_to_in_(KeyT key) {
     } 
     else {
         if (out_.size() >= out_size_) {
-            ListIt out_last_it = out_.end();
-            KeyT out_last_key  = out_last_it->first;
+            OutListIt out_last_it = std::prev(out_.end());
+            KeyT out_last_key  = *out_last_it;
             out_hash_.erase(out_last_key);
             out_.pop_back();
         }
@@ -131,11 +138,11 @@ void TwoQCache<PageT, KeyT>::push_to_in_(KeyT key) {
         in_hash_.erase(in_last.first);
         in_.pop_back();
 
-        out_.push_front(in_last);
+        out_.push_front(in_last.first);
         out_hash_[in_last.first] = out_.begin();
 
         in_.push_front({key, page});
         in_hash_[key] = in_.begin();
     }
 }
-} //namespace two_q_cache
+} //namespace TwoQCache

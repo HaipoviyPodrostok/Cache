@@ -18,10 +18,12 @@ int main() {
 
         if (!(std::cin >> cache_size >> num_elems)) {
             std::cerr << "ERROR: invalid input format" << std::endl;
+            return 1;
         }
 
         if (cache_size < 3) {
             std::cerr << "ERROR: cache size must be >= 3" << std::endl;
+            return 1;
         }
         
         for (size_t i = 0; i < num_elems; ++i) {
@@ -49,14 +51,16 @@ int main() {
         for (size_t i = 0; i < num_elems; ++i) {
             if (ideal_cache.lookup_update(input_data[i], i)) {ideal_hits++;}
         }
-        std::cout << two_q_hits << std::endl << ideal_hits << std::endl;
+        std::cout << two_q_hits << " " << ideal_hits << std::endl;
     }
     catch (const std::invalid_argument& e) {
         std::cerr << e.what() << std::endl;
     }    
-    catch (const std::runtime_error& e) {
-        std::cerr << e.what() << std::endl; 
+    catch (const std::out_of_range& e) {
+        std::cerr << e.what() << std::endl;
+        return 1;
     }
+    
     return 0;
 }
 
