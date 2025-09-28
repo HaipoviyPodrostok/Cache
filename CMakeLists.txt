@@ -21,7 +21,7 @@ foreach(two_q_file ${two_q_testfiles})
 
     add_test(
         NAME ${two_q_testname}
-        COMMAND bash -c "${CMAKE_SOURCE_DIR}/runtest.sh ${two_q_file} ${CMAKE_CURRENT_BINARY_DIR/two_q_cache.x"
+        COMMAND bash -c "${CMAKE_SOURCE_DIR}/runtest.sh ${two_q_file} ${CMAKE_CURRENT_BINARY_DIR}/two_q_cache.x"
         WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
     )
 
