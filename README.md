@@ -5,32 +5,29 @@ A C++ implementation of the 2Q cache replacement algorithm with comprehensive te
 ## To run app
 
 ```bash
-cmake -B build
-cmake --build build
-cd build
-./TwoQCache.x
+cmake -S . -B build && cmake --build ./build
+./build/TwoQCache.x
 ```
 ## To run tests
 ```bash
-cd build
-ctest
+ctest --test-dir build --output-on-failure
 ```
 
 ## Input Format
 ```
 <cache_size> <number_of_requests> <request1> <request2> <request3> ...
 ```
-## Ideal to 2Q caching comparisson
+## Ideal to 2Q caching comparison
 
 test case | 2Q cache hits | Ideal cache hits |
 |-------- | -------------- | ---------------- |
-| 1       |       4        |       4          |
-| 2       |       2        |       1          |
-| 3       |       13       |       15         |
+| 1       |       4        |       9          |
+| 2       |       189      |       327        |
+| 3       |       12       |       17         |
 | 4       |       5        |       5          |
-| 5       |       6        |       6          |
-| 6       |       8        |       8          |
+| 5       |       5        |       6          |
+| 6       |       8        |       9          |
 | 7       |       0        |       6          |
 | 8       |       7        |       7          |
-| 9       |       8        |       8          |
+| 9       |       8        |       13         |
 | 10      |       4        |       4          |
