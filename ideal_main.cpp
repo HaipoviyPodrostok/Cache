@@ -4,7 +4,6 @@
 #include <string>
 #include <vector>
 
-#include "two_q_cache.hpp"
 #include "ideal_cache.hpp"
 
 std::string slow_get_page(int key);
@@ -36,14 +35,6 @@ int main() {
             input_data.push_back(key);
         }
 
-        TwoQCache::TwoQCache<std::string, int> two_q_cache(cache_size, slow_get_page);
-
-        size_t two_q_hits = 0;
-
-        for (size_t i = 0; i < num_elems; ++i) {
-            if (two_q_cache.lookup_update(input_data[i])) {two_q_hits++;}
-        }
-
         IdealCache::IdealCache<int> ideal_cache(cache_size, num_elems, input_data);
 
         size_t ideal_hits = 0;
@@ -51,7 +42,7 @@ int main() {
         for (size_t i = 0; i < num_elems; ++i) {
             if (ideal_cache.lookup_update(input_data[i], i)) {ideal_hits++;}
         }
-        std::cout << two_q_hits << " " << ideal_hits << std::endl;
+        std::cout << ideal_hits << std::endl;
     }
     catch (const std::invalid_argument& e) {
         std::cerr << e.what() << std::endl;
@@ -65,7 +56,7 @@ int main() {
 }
 
 std::string slow_get_page(int key) {
-    std::string storage_file_name = "../assets/pages.txt";
+    std::string storage_file_name = "assets/pages.txt";
     
     std::ifstream file(storage_file_name);
     if (!file.is_open()) {
