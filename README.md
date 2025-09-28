@@ -2,12 +2,20 @@
 
 A C++ implementation of the 2Q cache replacement algorithm with comprehensive testing framework.
 
-## To run app
+## To run 2q cache:
 
 ```bash
 cmake -S . -B build && cmake --build ./build
-./build/TwoQCache.x
+./build/two_q_cache.x
 ```
+
+## To run 2q cache:
+
+```bash
+cmake -S . -B build && cmake --build ./build
+./build/ideal_cache.x
+```
+
 ## To run tests
 ```bash
 ctest --test-dir build --output-on-failure
