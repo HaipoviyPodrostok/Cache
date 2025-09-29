@@ -19,11 +19,6 @@ int main() {
             std::cerr << "ERROR: invalid input format" << std::endl;
             return 1;
         }
-
-        if (cache_size < 3) {
-            std::cerr << "ERROR: cache size must be >= 3" << std::endl;
-            return 1;
-        }
         
         for (size_t i = 0; i < num_elems; ++i) {
             int key;     

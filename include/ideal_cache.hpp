@@ -10,7 +10,7 @@ namespace IdealCache {
 template <typename KeyT = int>
 class IdealCache {
 public:
-    explicit IdealCache(size_t size, size_t num_elems, 
+    IdealCache(size_t size, size_t num_elems, 
                         std::vector<KeyT>& input_data);
     
     bool lookup_update(KeyT key, size_t cur_step);
@@ -98,4 +98,4 @@ void IdealCache<KeyT>::push_out_unpopular(size_t cur_step) {
     }
     cache_.erase(victim_it);
 }
-} //namespace IdealCache
+} //namespace IdealCache    
